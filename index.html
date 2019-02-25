@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>西柚音乐</title>
+  <link rel="shortcut icon" href="img/xiyou.png"/>
+  <link rel="stylesheet" href="css/musicplay.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+  <!--桌面首页:选择壁纸+西柚音乐图标+时间控件-->
+  <div id="contaner">
+      <img src="img/1.jpg" alt=""/>
+      <!--选择壁纸-->
+      <div id="nav">
+          <div id="tool">
+              <ul id="nav-right">
+                  <li id="choose-img-li">
+                      <!--icon-->
+                      <i id="pifu-icon"></i>
+                      <span>选择壁纸</span>
+                      <div id="img-box">  <!--class="img-box"-->
+                          <!--第一批-->
+                          <ul id="img1g">  <!--.position-relative-->
+                              <!--动态添加-->  <!--class="img-li"-->
+                              
+                          </ul>  <!--.position-relative-->
+                          <!--第二批-->
+                          <ul id="img2g"></ul>  <!--.position-relative-->
+                          <!--第三批-->
+                          <ul id="img3g"></ul>  <!--.position-relative-->
+                          <!--第四批-->
+                          <ul id="img4g"></ul>  <!--.position-relative-->
+                      </div>
+                      <!--换一批+点击图片更改-->
+                      <div id="spantext">
+                          <span id="text-left"></span>
+                          <span id="text-right"></span>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!--西柚音乐图标-->
+      <div class="image-icon" id="XYmusic-icon">
+          <img class="image-icon-img"
+              src="img/xiyou.png"
+              style="position:absolute;left:50px;top:50px;width:100px;height:100px"
+              alt="">
+          <p style="position:absolute;left:50px;top:160px;width:100px;height:100px">
+              <span class="animated flash">西</span>
+              <span class="animated flash">柚</span>
+              <span class="animated flash">音</span>
+              <span class="animated flash">乐</span>
+          </p>
+      </div>
+      <!--时间控件--->
+      <div class="date" id="datetime-parent">
+          <div class="date-son date" id="datetime-back">
+              <p>
+                  别后多年，终是不遇。<br>
+                  我，在回忆里，等故事继续。<br>
+                  你，在相思里，想美好结局。
+              </p>
+          </div>
+          <div class="date-son date" id="datetime">
+              <div id="datetime-left">
+                  <ul>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                  </ul>
+                  <div>
+                      <p></p>
+                      <p></p>
+                  </div>
+              </div>
+              <div id="datetime-right">
+                  <p></p>
+                  <p></p>
+                  <p></p>
+              </div>
+          </div>
+      </div>
+      <!--<div id="footer"></div>-->
+  </div>
+
+
+
+  <!--音乐播放器h5-->
+  <audio id="xin" src="music/1mmxhn-mww.mp3"></audio>
+  <div id="music">
+      <div id="music-boundary">
+          <!--1.头部-->
+          <div id="music-boundary-top">
+              <!--头像-->
+              <div id="touxiang">
+                  <img src="img/avatar.jpg" alt=""/>
+              </div>
+              <!--标题-->
+              <p>音 乐 随 心 听</p>
+              <!--返回按钮-->
+              <div id="music-back">
+                  <img src="img/close.png" alt=""/>
+              </div>
+              <!--搜索框-->
+              <input placeholder="请输入歌曲名称" type="search"/>
+          </div>
+          <!--2.中部-->
+          <div id="music-boundary-center">
+              <!--左侧歌曲列表-->
+              <div id="music-boundary-center-left">
+                  <ul>
+                      <li id="mymusic">我的音乐</li>
+                      <li class="music" id="xinl">我的一个道姑朋友</li>
+                      <li class="music" id="wol">致.孤勇如你</li>
+                      <li class="music" id="qianl">永夜</li>
+                      <li class="music" id="guol">我抬头一看满街都是但是狗</li>
+                      
+                  </ul>
+              </div>
+              <!--右侧轮播+展示栏-->
+              <div id="music-boundary-center-right">
+                  <!--轮播-->
+                  <ul>
+                      <li class="p1">
+                          <img src="img/01.jpg" alt=""/>
+                      </li>
+                      <li class="p2">
+                          <img src="img/02.jpg" alt=""/>
+                      </li>
+                      <li class="p3">
+                          <img src="img/03.jpg" alt=""/>
+                      </li>
+                  </ul>
+                  <!--展示栏-->
+                  <div class="music-model1">
+                      <img src="img/07.jpg" alt=""/>
+                      <div class="music-model">躲在时光尽头的悲伤</div>
+                  </div>
+                  <div>
+                      <img src="img/08.jpg" alt=""/>
+                      <div class="music-model">一个人看海</div>
+                  </div>
+                  <div>
+                      <img src="img/09.jpg" alt=""/>
+                      <div class="music-model">我想给你的</div>
+                  </div>
+                  <div>
+                      <img src="img/10.jpg" alt=""/>
+                      <div class="music-model">是你</div>
+                  </div>
+              </div>
+          </div>
+          <!--底部播放器-->
+          <div id="music-boundary-bottom">
+              <!--上一首按钮-->
+              <div id="music-pre" class="music-control">
+                  <img src="img/pre.png" alt=""/>
+              </div>
+              <!--暂停播放按钮-->
+              <div id="music-play" class="music-control">
+                  <img src="img/play.png" alt=""/>
+              </div>
+              <!--下一首按钮-->
+              <div id="music-next" class="music-control">
+                  <img src="img/next.png" alt=""/>
+              </div>
+              <!--播放图片-->
+              <div class="music-head">
+                  <img id="xinP" src="img/01.jpg" alt=""/>
+              </div>
+              <!--播放进度条-->
+              <div id="music-progress" class="music-progress">
+                  <div id="music-progress-w"></div>
+              </div>
+              <!--音乐播放当前时间/总时间-->
+              <p class="music-time">
+                  <span id="music-whentime"></span>
+                  <span id="music-totaltime"></span>
+              </p>
+          </div>
+      </div>
+  </div>
+
+  <!--外部js-->
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/playmusic.js"></script>
+</body>
+</html>
